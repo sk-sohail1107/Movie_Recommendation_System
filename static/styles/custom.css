@@ -1,0 +1,14 @@
+.dropdown-menu.show {
+    display: flex;
+    width: 420px;
+    flex-wrap: wrap;
+  }
+  
+  .dropdown-item {
+    width: 33,33%;
+    display: flex;
+    gap: 7rem;
+  }
+
+
+
