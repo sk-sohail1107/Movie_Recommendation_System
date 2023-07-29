@@ -6,11 +6,11 @@ import numpy as np
 import json
 import pickle
 
-movies_list = pickle.load(open(
+movies_list = pd.read_pickle(open(
     'C:/Users/shaik/Desktop/ML_Projects/Movies_Recommendation_System/movie_list.pkl', 'rb'))
-similarity = pickle.load(open(
+similarity = pd.read_pickle(open(
     'C:/Users/shaik/Desktop/ML_Projects/Movies_Recommendation_System/similarity.pkl', 'rb'))
-movies = pickle.load(open(
+movies = pd.read_pickle(open(
     'C:/Users/shaik/Desktop/ML_Projects/Movies_Recommendation_System/movies.pkl', 'rb'))
 
 
@@ -26,7 +26,7 @@ movies_df = pd.DataFrame(movies)
 movies_df.columns = ['index', 'id', 'title',
                      'genres', 'keywords', 'cast', 'director', 'vote_average', 'vote_count', 'poster']
 
-top_50 =  pickle.load(open(
+top_50 =  pd.read_pickle(open(
     'C:/Users/shaik/Desktop/ML_Projects/Movies_Recommendation_System/Top_50.pkl', 'rb'))
 movies_json = movies_df.to_json(
     orient='records', date_format='iso', date_unit='s')
